@@ -146,7 +146,7 @@ resource "aws_subnet" "private-subnet-4" {
 }
 
 resource "aws_instance" "testinstance"{
-    ami = "ami-09d56f8956ab235b3"
+    ami = "ami-0aeb7c931a5a61206"
     instance_type = "t3.micro"
     subnet_id = aws_subnet.public-subnet-1.id
     associate_public_ip_address = true
