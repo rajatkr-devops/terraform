@@ -154,12 +154,13 @@ resource "aws_instance" "testinstance"{
     key_name = "test"
 }
 
-terraform{
-    backend "s3" {
-        bucket = "rajat-terraform-state-backend01"
-        encrypt = true
-        dynamodb_table = "terraform-state"
-        key = "ec2&vpc/terraform-tfstate"
-        region = "us-east-2"
-    }
-}
+
+# terraform{
+#     backend "s3" {
+#         bucket = "rajat-terraform-state-backend01"
+#         encrypt = true
+#         dynamodb_table = "terraform-state"
+#         key = "ec2&vpc/terraform-tfstate"
+#         region = "us-east-2"
+#     }
+# }
