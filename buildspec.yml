@@ -14,4 +14,8 @@ phases:
       - terraform --version
       - terraform init -input=false
       - terraform validate
-      - terraform plan -lock=false -input=false
+      #- terraform plan -lock=false -input=false
+      - terraform $TF_COMMAND -auto-approve
+  post_build:
+    commands:
+      - echo terraform $TF_COMMAND complete on 'date'
